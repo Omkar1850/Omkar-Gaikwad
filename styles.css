@@ -288,7 +288,8 @@ body {
     .hero-image {
    
     height: auto;
-    width: 80vw;
+    width: 50vw;
+    right: 50%; 
     border-radius: 10px; /* optional rounded corners */
     object-fit: contain; /* shows whole image without cropping */
 }
@@ -340,3 +341,4 @@ body {
     text-align: center;
   }
 }
+
