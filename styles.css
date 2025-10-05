@@ -1,0 +1,342 @@
+/* Basic Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f14e4e;
+    --background-light: #e6f0ff;
+    --background-white: #ffffff;
+    --text-dark: #333;
+    --text-light: #555;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-poppins);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* --- Header Section --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--background-white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    background-color: var(--background-white);
+    border: 2px solid var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;  /* visible on large screens */
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.menu-toggle {
+  display: none; /* hide hamburger by default */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-white);
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    gap: 50px;
+}
+
+.hero-text-and-button {
+    flex: 1;
+    max-width: 600px;
+    padding-left: 5%;
+}
+
+.tagline {
+    background-color: #e3f2fd;
+    color: #4c688c;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-hire-me {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-hire-me:hover {
+    background-color: #d84545;
+}
+
+.hero-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Aligns image to the left within its container */
+    background-color: var(--background-light);
+    min-height: 110vh; /* A minimum height to see the background color */
+}
+
+.hero-image {
+    position: absolute;
+    bottom: -15%;
+    right: 65%; /* Adjust this to move the image left or right */
+    max-width: auto;
+    height: 50%;
+}
+.hero-image1 {
+    position: absolute;
+    bottom: 0%;
+    right: 5%; /* Adjust this to move the image left or right */
+    max-width: auto;
+    height: 50%;
+}
+
+/*CSS for the quote box*/
+.quote-box {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid var(--primary-color);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  font-style: italic;
+  color: var(--text-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.quote-box span {
+  display: block;
+  text-align: right;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* --- Logo Bar Section --- */
+.logo-bar {
+    display: flex;  
+    /* Makes the .logo-bar a flex container so its child items (logos) line up in a row */
+    justify-content: space-around;  
+    /* Spreads the logos evenly with equal space around each logo */
+    align-items: center;  
+    /* Aligns logos vertically in the middle of the bar */
+    padding: 25px 5%;  
+    /* Adds 25px space top/bottom and 5% space left/right inside the bar */
+    gap: 15px;  
+    /* Ensures a 15px gap between each logo */
+    background-color: var(--background-white);  
+    /* Uses a CSS variable for background (probably white in your theme) */
+    border-radius: 50px;  
+    /* Rounds the corners heavily → makes the bar pill-shaped */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);  
+    /* Adds a soft shadow below the bar → gives a floating effect */
+    margin: 50px auto;  
+    /* 50px space above and below the bar, auto on left/right to center it horizontally */
+    max-width: 80%;  
+    /* Ensures the bar doesn’t stretch too wide; capped at 80% of page width */
+    transform: translateY(50%);  
+    /* Shifts the bar down by 50% of its own height → often used to overlap the section below */
+    margin-bottom: 0px;
+}
+
+.logo-image {
+    height: 30px;
+    width: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+/* --- Logo Bar Section --- */
+.logo-image:hover {
+    opacity: 1;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 760px) {
+
+    /*
+    .hero {
+    height: 110vh; 
+   
+    }  */   
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .tagline {
+    margin-top: 40px;
+    }
+
+    .hero-text-and-button {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-image-container {
+        min-height: 80vh;
+        min-width: 100vw;
+        justify-content: center;
+    }
+/*
+    .hero-image {
+        position: relative;
+
+        max-width: 80%;
+    } */
+
+    .hero-image {
+   
+    height: auto;
+    width: 80vw;
+    border-radius: 10px; /* optional rounded corners */
+    object-fit: contain; /* shows whole image without cropping */
+}
+.quote-box {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid var(--primary-color);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  font-style: italic;
+  color: var(--text-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .logo-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+        transform: none;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive: screen width ≤ 768px */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;  /* show hamburger */
+  }
+
+  .nav-links {
+    display: none;        /* hide menu initially */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+  }
+
+  .nav-links.active {
+    display: flex;        /* show menu when active */
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+}
