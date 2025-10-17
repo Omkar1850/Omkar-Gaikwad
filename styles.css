@@ -200,6 +200,57 @@ body {
   font-style: normal;
 }
 
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .info-container {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      margin-top:30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+
+.quote-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.quote-box span {
+  display: block;
+  text-align: right;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* --- Logo Bar Section --- */
 .logo-bar {
     display: flex;  
