@@ -258,6 +258,38 @@ html {
   font-style: normal;
 }
 
+/*porfolio section*/
+.portfolio {
+  background: var(--background-light);
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+
+}
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  margin-bottom: 10px;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.textcolor {
+  color: #f14e4e;
+  font-weight: 600;
+}
+
 /* Section Styling for articles */
 .articles {
   background: linear-gradient(135deg, #f0f4f8, #e8f0fe);
@@ -272,6 +304,7 @@ html {
   font-weight: 600;
   color: #1a237e;
   margin-bottom: 30px;
+  text-align: center;
   position: relative;
 }
 
