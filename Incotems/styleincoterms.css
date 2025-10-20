@@ -60,7 +60,11 @@ body {
 .about {
   background-color: #f9fafb;
 }
-
+.incoterms-image {   /* Adjust this to move the image left or right */
+    width: 50vw;
+    height: auto;
+    border-radius: 10px;
+  } 
 /* ---------- Cards ---------- */
 .cards {
   display: grid;
@@ -171,4 +175,10 @@ body {
   .card {
     padding: 1rem;
   }
+  .incoterms-image {
+    width: 80vw;
+    height: auto;
+    border-radius: 10px;
+  }
+
 }

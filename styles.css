@@ -251,6 +251,83 @@ body {
   font-style: normal;
 }
 
+/* Section Styling for articles */
+.articles {
+  background: linear-gradient(135deg, #f0f4f8, #e8f0fe);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3949ab;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Article Card */
+.article-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Styles */
+.article-title {
+  font-size: 1.5rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  color: #5c6bc0;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.article-text {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Link Style */
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1e88e5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.read-more:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+
 /* --- Logo Bar Section --- */
 .logo-bar {
     display: flex;  
