@@ -370,15 +370,97 @@ body {
 /* =========================
    Responsive Styles (Mobile)
    ========================= */
-@media (max-width: 760px) {
 
-    /*
-    .hero {
-    height: 110vh; 
-   
-    }  */   
+/* Responsive: screen width ≤ 768px */
+@media (max-width: 768px) {
+    /* Hamburger / Cross */
+  #menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 1100; /* Always above menu */
+    color: var(--text-dark);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
 
-    .hero-container {
+  #menu-toggle.active {
+    color: var(--primary-color);
+  }
+
+  /* Mobile dropdown menu */
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+
+  /* When active (menu open) */
+  .nav-links.active {
+    max-height: 500px; /* adjust depending on menu items */
+    opacity: 1;
+  }
+
+  /* Menu items animation */
+  .nav-links li {
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  /* Animate items when menu opens */
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+  }
+
+  /* Optional: Add a small bounce effect on open */
+  .nav-links.active {
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hero-container {
         flex-direction: column;
         text-align: center;
         gap: 30px;
@@ -442,31 +524,5 @@ body {
         transform: none;
         margin-top: 20px;
     }
-}
-
-/* Responsive: screen width ≤ 768px */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;  /* show hamburger */
-  }
-
-  .nav-links {
-    display: none;        /* hide menu initially */
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #fff;
-  }
-
-  .nav-links.active {
-    display: flex;        /* show menu when active */
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-    text-align: center;
-  }
 }
 
