@@ -19,6 +19,13 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
 }
+/* this section added for scroll & menu scrolling */
+html {
+  scroll-behavior: smooth;
+}
+  section {
+    scroll-margin-top: 80px; /* smaller header height on mobile */
+}
 
 /* --- Header Section --- */
 .header {
