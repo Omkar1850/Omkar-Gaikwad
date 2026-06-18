@@ -19,21 +19,50 @@ body {
 
 /* ---------- Header ---------- */
 .header {
+  position: relative;
   background-color: #2d3748;
   color: #fff;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
 }
 
 .header h1 {
   font-size: 2.5rem;
+  margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .header p {
   color: #e53e3e;
   font-size: 1.2rem;
+  margin: 0;
 }
+
+/* ---------- Home Button ---------- */
+.home-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background-color: #e53e3e;
+  color: white;
+  text-decoration: none;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #c53030;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 
 /* ---------- Sections ---------- */
 .section {
@@ -60,11 +89,25 @@ body {
 .about {
   background-color: #f9fafb;
 }
-.incoterms-image {   /* Adjust this to move the image left or right */
-    width: 50vw;
-    height: auto;
-    border-radius: 10px;
-  } 
+
+/* ---------- Incoterms Image ---------- */
+
+.incoterm-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.incoterm-image img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+
 /* ---------- Cards ---------- */
 .cards {
   display: grid;
@@ -162,23 +205,1215 @@ body {
   font-size: 0.85rem;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
+/* ===================================
+   EXW (Ex Works)
+=================================== */
+
+.exw {
+  background: #faf5ff;
+  border-top: 4px solid #805ad5;
+}
+
+.exw h2 {
+  border-left: 5px solid #805ad5;
+  color: #553c9a;
+}
+
+/* EXW Image */
+.exw-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.exw-image img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+.exw .definition {
+  background: #f3e8ff;
+  border-top: 5px solid #805ad5;
+}
+
+.exw .definition h3 {
+  color: #553c9a;
+}
+
+.exw .seller {
+  background: #6b46c1;
+  color: white;
+}
+
+.exw .seller h3 {
+  color: white;
+}
+
+/* Notes */
+.exw .notes {
+  background: #f8f4ff;
+  border-left: 5px solid #805ad5;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+/* Example Box */
+.exw .advantages {
+  background: white;
+  border-left: 5px solid #805ad5;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.exw .advantages h3,
+.exw .notes h3 {
+  color: #553c9a;
+}
+
+.exw .card {
+  transition: 0.3s ease;
+}
+
+.exw .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   FCA (Free Carrier)
+=================================== */
+
+.fca {
+    background: #f8fbff;
+    border-top: 4px solid #3182ce;
+}
+
+.fca h2 {
+    border-left: 5px solid #3182ce;
+    color: #2c5282;
+}
+
+/* FCA Image */
+.fca-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.fca-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+.fca .definition {
+    background: #ebf8ff;
+    border-top: 5px solid #3182ce;
+}
+
+.fca .definition h3 {
+    color: #2c5282;
+}
+
+.fca .seller {
+    background: #2b6cb0;
+    color: white;
+}
+
+.fca .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+.fca .advantages {
+    background: white;
+    border-left: 5px solid #3182ce;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.fca .advantages h3 {
+    color: #2b6cb0;
+}
+
+/* Notes */
+.fca .notes {
+    background: #edf7ed;
+    border-left: 5px solid #38a169;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.fca .notes h3 {
+    color: #2f855a;
+}
+
+.fca .card {
+    transition: 0.3s ease;
+}
+
+.fca .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   FAS (Free Alongside Ship)
+=================================== */
+
+.fas {
+    background: #fffaf5;
+    border-top: 4px solid #dd6b20;
+}
+
+.fas h2 {
+    border-left: 5px solid #dd6b20;
+    color: #9c4221;
+}
+
+/* FAS Image */
+
+.fas-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.fas-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.fas .definition {
+    background: #fff7ed;
+    border-top: 5px solid #dd6b20;
+}
+
+.fas .definition h3 {
+    color: #9c4221;
+}
+
+.fas .seller {
+    background: #c05621;
+    color: white;
+}
+
+.fas .seller h3 {
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Risk Transfer / Example */
+
+.fas .advantages {
+    background: white;
+    border-left: 5px solid #dd6b20;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.fas .advantages h3 {
+    color: #c05621;
+}
+
+/* Notes */
+
+.fas .notes {
+    background: #fff3e0;
+    border-left: 5px solid #dd6b20;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.fas .notes h3 {
+    color: #9c4221;
+}
+
+/* Hover Effect */
+
+.fas .card {
+    transition: 0.3s ease;
+}
+
+.fas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   FOB (Free On Board)
+=================================== */
+
+.fob {
+  background: #f0fff4;
+  border-top: 4px solid #38a169;
+}
+
+.fob h2 {
+  border-left: 5px solid #38a169;
+  color: #276749;
+}
+
+.fob-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.fob-image img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.fob .definition {
+  background: #f0fff4;
+  border-top: 5px solid #38a169;
+}
+
+.fob .seller {
+  background: #276749;
+  color: white;
+}
+
+.fob .advantages {
+  background: white;
+  border-left: 5px solid #38a169;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.fob .notes {
+  background: #e6fffa;
+  border-left: 5px solid #38a169;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.fob .card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* ===================================
+   CFR (Cost & Freight)
+=================================== */
+
+.cfr {
+    background: #f0fdff;
+    border-top: 4px solid #0891b2;
+}
+
+.cfr h2 {
+    border-left: 5px solid #0891b2;
+    color: #0f4c5c;
+}
+
+/* CFR Image */
+
+.cfr-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cfr-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.cfr .definition {
+    background: #cffafe;
+    border-top: 5px solid #0891b2;
+}
+
+.cfr .definition h3 {
+    color: #0f4c5c;
+}
+
+.cfr .seller {
+    background: #0f766e;
+    color: white;
+}
+
+.cfr .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.cfr .advantages {
+    background: white;
+    border-left: 5px solid #0891b2;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cfr .advantages h3 {
+    color: #0f766e;
+}
+
+/* Notes */
+
+.cfr .notes {
+    background: #ecfeff;
+    border-left: 5px solid #0891b2;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cfr .notes h3 {
+    color: #0f4c5c;
+}
+
+/* Hover Effect */
+
+.cfr .card {
+    transition: 0.3s ease;
+}
+
+.cfr .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   CIF (Cost, Insurance & Freight)
+=================================== */
+
+.cif {
+    background: #f7f5ff;
+    border-top: 4px solid #7c3aed;
+}
+
+.cif h2 {
+    border-left: 5px solid #7c3aed;
+    color: #5b21b6;
+}
+
+/* CIF Image */
+
+.cif-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cif-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.cif .definition {
+    background: #ede9fe;
+    border-top: 5px solid #7c3aed;
+}
+
+.cif .definition h3 {
+    color: #5b21b6;
+}
+
+.cif .seller {
+    background: #6d28d9;
+    color: white;
+}
+
+.cif .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.cif .advantages {
+    background: white;
+    border-left: 5px solid #7c3aed;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cif .advantages h3 {
+    color: #6d28d9;
+}
+
+/* Notes */
+
+.cif .notes {
+    background: #f3f0ff;
+    border-left: 5px solid #7c3aed;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cif .notes h3 {
+    color: #5b21b6;
+}
+
+/* Hover Effect */
+
+.cif .card {
+    transition: 0.3s ease;
+}
+
+.cif .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   CPT (Carriage Paid To)
+=================================== */
+
+.cpt {
+    background: #fff5f5;
+    border-top: 4px solid #dc2626;
+}
+
+.cpt h2 {
+    border-left: 5px solid #dc2626;
+    color: #991b1b;
+}
+
+/* CPT Image */
+
+.cpt-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cpt-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.cpt .definition {
+    background: #fee2e2;
+    border-top: 5px solid #dc2626;
+}
+
+.cpt .definition h3 {
+    color: #991b1b;
+}
+
+.cpt .seller {
+    background: #b91c1c;
+    color: white;
+}
+
+.cpt .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.cpt .advantages {
+    background: white;
+    border-left: 5px solid #dc2626;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cpt .advantages h3 {
+    color: #b91c1c;
+}
+
+/* Notes */
+
+.cpt .notes {
+    background: #fef2f2;
+    border-left: 5px solid #dc2626;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cpt .notes h3 {
+    color: #991b1b;
+}
+
+/* Hover Effect */
+
+.cpt .card {
+    transition: 0.3s ease;
+}
+
+.cpt .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   CIP (Carriage and Insurance Paid To)
+=================================== */
+
+.cip {
+    background: #faf5ff;
+    border-top: 4px solid #7c3aed;
+}
+
+.cip h2 {
+    border-left: 5px solid #7c3aed;
+    color: #5b21b6;
+}
+
+/* CIP Image */
+
+.cip-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cip-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.cip .definition {
+    background: #ede9fe;
+    border-top: 5px solid #7c3aed;
+}
+
+.cip .definition h3 {
+    color: #5b21b6;
+}
+
+.cip .seller {
+    background: #6d28d9;
+    color: white;
+}
+
+.cip .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.cip .advantages {
+    background: white;
+    border-left: 5px solid #7c3aed;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cip .advantages h3 {
+    color: #6d28d9;
+}
+
+/* Notes */
+
+.cip .notes {
+    background: #f3e8ff;
+    border-left: 5px solid #7c3aed;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cip .notes h3 {
+    color: #5b21b6;
+}
+
+/* Hover Effect */
+
+.cip .card {
+    transition: 0.3s ease;
+}
+
+.cip .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   DAP (Delivered At Place)
+=================================== */
+
+.dap {
+    background: #fffbeb;
+    border-top: 4px solid #d97706;
+}
+
+.dap h2 {
+    border-left: 5px solid #d97706;
+    color: #92400e;
+}
+
+/* DAP Image */
+
+.dap-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dap-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.dap .definition {
+    background: #fef3c7;
+    border-top: 5px solid #d97706;
+}
+
+.dap .definition h3 {
+    color: #92400e;
+}
+
+.dap .seller {
+    background: #b45309;
+    color: white;
+}
+
+.dap .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.dap .advantages {
+    background: white;
+    border-left: 5px solid #d97706;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.dap .advantages h3 {
+    color: #b45309;
+}
+
+/* Notes */
+
+.dap .notes {
+    background: #fffbeb;
+    border-left: 5px solid #d97706;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.dap .notes h3 {
+    color: #92400e;
+}
+
+/* Hover Effect */
+
+.dap .card {
+    transition: 0.3s ease;
+}
+
+.dap .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   DPU (Delivered at Place Unloaded)
+=================================== */
+
+.dpu {
+    background: #f0fdfa;
+    border-top: 4px solid #0f766e;
+}
+
+.dpu h2 {
+    border-left: 5px solid #0f766e;
+    color: #115e59;
+}
+
+/* DPU Image */
+
+.dpu-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.dpu-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+
+.dpu .definition {
+    background: #ccfbf1;
+    border-top: 5px solid #0f766e;
+}
+
+.dpu .definition h3 {
+    color: #115e59;
+}
+
+.dpu .seller {
+    background: #0f766e;
+    color: white;
+}
+
+.dpu .seller h3 {
+    color: white;
+}
+
+/* Advantages */
+
+.dpu .advantages {
+    background: white;
+    border-left: 5px solid #0f766e;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.dpu .advantages h3 {
+    color: #0f766e;
+}
+
+/* Notes */
+
+.dpu .notes {
+    background: #ecfeff;
+    border-left: 5px solid #0f766e;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.dpu .notes h3 {
+    color: #115e59;
+}
+
+/* Hover Effect */
+
+.dpu .card {
+    transition: 0.3s ease;
+}
+
+.dpu .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   DDP (Delivered Duty Paid)
+=================================== */
+
+.ddp {
+  background: #fff5f5;
+  border-top: 4px solid #e53e3e;
+}
+
+.ddp h2 {
+  border-left: 5px solid #e53e3e;
+  color: #c53030;
+}
+
+/* DDP Images */
+.ddp-images {
+  margin: 2rem 0;
+}
+
+.ddp-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ddp-image img {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.ddp-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Definition Card */
+.ddp .definition {
+  background: #fff0f0;
+  border-top: 5px solid #e53e3e;
+}
+
+.ddp .definition h3 {
+  color: #c53030;
+}
+
+/* Seller Card */
+.ddp .seller {
+  background: #c53030;
+  color: #fff;
+}
+
+.ddp .seller h3 {
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.5rem;
+}
+
+.ddp .seller ul {
+  padding-left: 20px;
+}
+
+.ddp .seller li {
+  margin-bottom: 10px;
+}
+
+/* Advantages Box */
+.ddp .advantages {
+  background: #ffffff;
+  border-left: 5px solid #e53e3e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ddp .advantages h3 {
+  color: #c53030;
+}
+
+.ddp .advantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ddp .advantages li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.ddp .advantages li::before {
+  content: "✓";
+  color: #e53e3e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Notes Box */
+.ddp .notes {
+  background: #fff0f0;
+  border-left: 5px solid #e53e3e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.ddp .notes h3 {
+  color: #c53030;
+}
+
+.ddp .notes ul {
+  margin-left: 1.5rem;
+}
+
+.ddp .notes li {
+  margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.ddp .card {
+  transition: all 0.3s ease;
+}
+
+.ddp .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+   TABLET VIEW (1024px and below)
+=================================== */
+@media (max-width: 1024px) {
+
+  .container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
   .header h1 {
     font-size: 2rem;
   }
 
+  .header p {
+    font-size: 1rem;
+  }
+
   .section {
-    padding: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .incoterm-image img,
+  .exw-image img,
+  .fca-image img,
+  .fas-image img,
+  .fob-image img,
+  .cfr-image img,
+  .cif-image img,
+  .cpt-image img,
+  .cip-image img,
+  .dap-image img,
+  .dpu-image img,
+  .ddp-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* ===================================
+   MOBILE VIEW (768px and below)
+=================================== */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .card {
     padding: 1rem;
   }
-  .incoterms-image {
-    width: 80vw;
+
+  .definition,
+  .seller,
+  .advantages,
+  .notes {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .advantages,
+  .notes {
+    padding: 1rem;
+  }
+
+  .advantages h3,
+  .notes h3 {
+    font-size: 1.2rem;
+  }
+
+  .section ul {
+    margin-left: 1.2rem;
+  }
+
+  .section li {
+    font-size: 0.95rem;
+  }
+
+  img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ===================================
+   SMALL MOBILE VIEW (480px and below)
+=================================== */
+@media (max-width: 480px) {
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .section li,
+  .section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .advantages li,
+  .notes li {
+    padding-left: 1.2rem;
+  }
+
+  .ddp-image img,
+  .cip-image img,
+  .dap-image img,
+  .dpu-image img,
+  .cif-image img,
+  .cfr-image img,
+  .fob-image img,
+  .fas-image img,
+  .fca-image img,
+  .exw-image img {
+    border-radius: 8px;
+  }
+}
+
+
+/* ===================================
+   IMAGE GALLERY (DDP TWO IMAGES)
+=================================== */
+
+.ddp-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.ddp-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .ddp-images {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .home-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 14px;
+    font-size: 13px;
   }
 
 }
+
